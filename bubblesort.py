@@ -18,7 +18,7 @@ bubblesort_fast = cuda.jit()(bubblesort)
 dtype = numpy.int64
 
 def main():
-    N = 5000
+    N = 4000
     blockSize = 256
     numBlock = int((N+blockSize -1)/blockSize)
     arr = numpy.array(list(reversed(range(N))),dtype=dtype)
